@@ -1,4 +1,4 @@
-package com.portifolio.apiprodutos.Entity;
+package com.portifolio.apiprodutos.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
