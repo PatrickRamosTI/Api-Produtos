@@ -1,4 +1,4 @@
- API de Produtos  Portfólio
+**API de Produtos - Portfólio**
 
 Este é um projeto de API RESTful desenvolvida com Spring Boot, com foco na criação, leitura, atualização e exclusão de produtos. O objetivo é fornecer uma API para cadastro e gestão de produtos.
 
