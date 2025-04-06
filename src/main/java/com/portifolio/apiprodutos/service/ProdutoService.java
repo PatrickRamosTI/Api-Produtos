@@ -25,7 +25,7 @@ public class ProdutoService {
     }
 
     // Listar todos
-    public List<Produto> ListarTodos(){
+    public List<Produto> listarTodos(){
         return repository.findAll();
     }
 
