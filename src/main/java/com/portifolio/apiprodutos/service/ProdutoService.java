@@ -13,7 +13,11 @@ import jakarta.persistence.EntityNotFoundException;
 @Service
 public class ProdutoService {
 
-    private ProdutoRepository repository;
+    private final ProdutoRepository repository;
+
+    public ProdutoService(ProdutoRepository repository) {
+        this.repository = repository;
+    }
 
     // Criar
     public Produto criar(ProdutoDTO dto){
@@ -29,7 +33,7 @@ public class ProdutoService {
         return repository.findAll();
     }
 
-    // Buscar por ID (agora com apenas um parâmetro Long)
+    // Buscar por ID
     public Produto buscarPorId(Long id){
         return repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Produto não encontrado"));
@@ -43,6 +47,7 @@ public class ProdutoService {
         produto.setPreco(dto.getPreco()); 
         return repository.save(produto); 
     }
+
     // Deletar
     public void deletar(Long id){
         Produto produto = buscarPorId(id);
